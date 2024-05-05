@@ -1,2 +1,2 @@
 # CS_hyn
-Easy CourseScheduler
+Easy CourseScheduler from Ya-Nuo, Hsu CMPSC 221
