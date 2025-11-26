@@ -1,39 +1,37 @@
 # 📚 Course Scheduler (CS221 Course)
 
 ## 📝 Overview
-This project is a course scheduling system that utilizes an embedded database to store, manage, and retrieve academic scheduling information. It is likely part of a Java application or backend system that interacts with the Derby database engine.
+This project is a course scheduling system built with **Java Swing** that interacts with an **Apache Derby database (Network Server mode)** to store, manage, and retrieve academic scheduling information.
 
 ## 🗂️ Project Structure
 ```
-CourseSchedulerDByzh5492/
-├── db.lck
-├── log/
-├── seg0/
-├── tmp/
-├── service.properties
-├── README_DO_NOT_TOUCH_FILES.txt
+Project Root/
+├── src/
+│   ├── MainFrame.java        (GUI Entry Point)
+│   ├── DBConnection.java     (Database Configuration)
+│   └── ... (Queries files)
+├── CourseSchedulerDByzh5492/ (Database Folder)
+└── README.md
 ```
 
-- **db.lck**: Lock file for Derby database instance
-- **log/**: Transaction and activity logs
-- **seg0/**: Stores actual table data
-- **service.properties**: Configuration file for the database
-- **tmp/**: Temporary data for DB processes
-- **README_DO_NOT_TOUCH_FILES.txt**: Warning to avoid manual changes to the DB files
+- **src/**: Contains the Java source code and application logic.
+- **CourseSchedulerDByzh5492/**: Stores the embedded Apache Derby database files. **Note: Do not modify or delete files inside this directory to prevent data corruption.**
 
 ## ⚙️ Requirements
 - Java Development Kit (JDK)
-- Apache Derby (or a Java app using embedded Derby)
-- Optional: Java GUI or CLI interface to interact with the database
+- Apache Derby Database Server (configured on port 1527)
+- NetBeans IDE (Recommended for easy DB management)
 
 ## ▶️ How to Use
-1. Clone or unzip the project into your working directory.
-2. Start your Java application that connects to this embedded Derby database.
-3. Ensure no files in the `CourseSchedulerDByzh5492` folder are manually edited or removed.
+1. Clone or unzip the project.
+2. **Start the Apache Derby Network Server** on `localhost:1527`.
+   - *If using NetBeans:* Go to `Services` > `Databases` > Right-click `Java DB` > `Start Server`.
+3. Run `MainFrame.java` to start the application.
+4. Ensure the `CourseSchedulerDByzh5492` folder exists in the project root relative to the execution path.
 
 ## 📌 Notes
-- Do **not** modify the files inside the Derby database folder directly.
-- Always interact with the database through your Java program or via SQL commands using a supported Derby interface.
+- Do **not** modify the files inside the `CourseSchedulerDByzh5492` folder directly.
+- The default database credentials are set to user: `java`, password: `java` (defined in `DBConnection.java`).
 
 ## 👤 Author
-Ya-Nuo, Hsu
+Ya-Nuo Hsu (Louis)
